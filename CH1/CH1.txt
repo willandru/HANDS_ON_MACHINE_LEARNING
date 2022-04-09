@@ -72,3 +72,46 @@ BAD ALGORITHMS
 UNDERFITTING THE TRAINING DATA: 
 
 	It occurs when the model is to simple to learn the underlying structure of the data.
+
+TESTING AND VALIDATING
+
+	Split the data into training set and test set
+
+HYPERPARAMETER TUNING AND MODEL SELECTION
+
+	¿How to choose the value of the regularization hyperparameter? (Train 100 different models usign 100 different hyperparameters (?))
+
+	HOLD OUT VALIDATION: You hold out part of the training set to evaluate several candidate models and select the best one.
+						The new held out set is called the VALIDATION SET (or DEVELOPMENT SET or DEV SET).
+						More specifically you train multiple models whit varius hypermparameters on the reduced training set, and you select
+						the model that performs the best in the validation set.
+						After this hold out validation process, you train the best model on the best training set
+
+						-If the validation set is too small you will end up whit a bad model
+
+						-If the validation set is too large, the remaining training set will be much smaller than the full training set.
+							It is not ideal to compare candidate models trained on a much smaller training set.
+							One way to solve this is to perform repeated CROSS-VALIDATION, using many small validation sets.
+							CROSS-VALIDATION
+								Each model is evaluated once per validation set after it's trained on the rest of the data. 
+								By averaging out all the evaluations of a model, you get a much more accurate measure of its performance.
+
+								-The training time is multiplied by the number of validation sets.
+
+
+			~10.000 representative instances in your DATA SET.{ it is a small data set}
+
+			Andrew Ng ----->  Training Set | Train-Dev Set ---> Train the model on the training set and evaluate it on the train-dev set to see if its overfiting your actual data (taraining set).
+
+
+
+			NO FREE LUNCH THEOREM
+
+			To decide what data to discard and what data to keep, you must make assumptions
+
+			"If you make absolutely no assumptions about the data, then there is no reason to prefer one model over any other." <-- NO FREE LUCNH THEOREM (NFL).
+
+			*There is no model that is a priori guaranteed to work better
+
+	¿How would you define Machine Learning? : Its the hability of a computer to numerically observe the data and crate correlations and observations on that data using different algorithms, thatn enables the machines to understand the data and perform different actions whits its found knoledge.
+	¿Can you name four types of problems where it shines? It can be used to visually represent data sets tht have hundreds of dimensions into 2D and 3D plots. It can be used to clasiffy instances of the data or real world. 
