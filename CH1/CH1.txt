@@ -39,3 +39,36 @@ MODEL-BASED LEARNING: Another way to generalize from a set of examples is to bui
 
 
 TRAINING A MODEL: Means runing an algorithm to find the model parameters that will make it best fitthe training data (and hopfully make good predictions)
+
+	Replacing the Linear Regression Model with k-Nearest Neighbors regression is as simple as:
+
+	import sklearn.linear_model
+	model= sklearn.linear_model.LinearRegression()
+
+	with:
+
+	import sklearn.neighbors
+	model = sklearn.neighbors.KNeighborsRegressor(n_neighbors=3)
+
+NON-REPRESENTATIVE DATA
+
+	-sampling noise: if the sample data is too small
+	-samplin bias: If teh sampling method is flawed
+		-nonresponse bias
+	POOR-QUALITY DATA
+	IRRELEVANT FEATURES : Feature engineering:
+		-Feature selection (selecting the most useful)
+		- Feature extraction (combining existing features to produce a more useful one)
+		-Creating new features by gathering new data.
+
+BAD ALGORITHMS
+	
+	OVERFITTING TRAINING DATA: The model performs well in the training data but it dows not generalzes well
+	-Regularization: COnstraining a model to make it simpler and reduce the risk of overfitting
+	For ezample in the above example if we force Theta_1=0 , the algorithm will have only one degree of freedom
+	-Hyperparameter : Controls the amount of regularization to apply during leaning.
+	An hyperparameter is a parameter of a learning algorithm (not of the model). It is not affected by the algorithm, it is set prior training and kept constant. TUrnung hyperparameters is an important part of building a MAchine Learning system
+
+UNDERFITTING THE TRAINING DATA: 
+
+	It occurs when the model is to simple to learn the underlying structure of the data.
