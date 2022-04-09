@@ -31,7 +31,7 @@ gdp_per_capita = pd.read_csv("gdp_per_capita.csv",thousands=',',delimiter='\t',e
 
 # Prepare the data
 country_stats = prepare_country_stats(oecd_bli, gdp_per_capita)
-print('Country Stats: ', country_stats)
+
 X = np.c_[country_stats["GDP per capita"]]
 print('X : ', X)
 y = np.c_[country_stats["Life satisfaction"]]
@@ -43,11 +43,12 @@ country_stats.plot(kind='scatter', x="GDP per capita", y='Life satisfaction')
 #plt.show()
 
 # Select a linear model
-model = sklearn.linear_model.LinearRegression()
-
+model = sklearn.neighbors.KNeighborsRegressor(n_neighbors=3)
+print(model)
 # Train the model
-print("Training ..")
+
 model.fit(X, y)
+
 
 # Make a prediction for Cyprus
 X_new = [[22587]]  # Cyprus' GDP per capita
