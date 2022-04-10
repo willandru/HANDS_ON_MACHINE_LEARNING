@@ -78,5 +78,8 @@ SHORTLIST PROMISING MODELS
 	6. Perform one or two more quick iterations of the five previous steps.
 	7. Shortlist the top three to five most promisingmodels, preferring models that make different types of errors. 
 
-FINE-TUNE THE SYSTEM
-	- You will want to use as much data for the step
+
+
+			CALIFORNIA HOUSING PRICES
+
+			

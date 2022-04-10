@@ -1,0 +1,31 @@
+How to download a data set taht is in a .tar file and we've got the url?
+
+
+
+OS module:
+
+*
+os.makedirs()	
+https://www.geeksforgeeks.org/python-os-makedirs-method/
+
+Example:
+	/home/User/Documents/GeeksForGeeks/Authors/ihritik
+	Suppose we want to create directory ‘ihritik’ but Directory ‘GeeksForGeeks’ and ‘Authors’ are unavailable in the path. Then os.makedirs() method will create all unavailable/missing directory in the specified path. ‘GeeksForGeeks’ and ‘Authors’ will be created first then ‘ihritik’ directory will be created. 
+	
+*
+os.path.join():
+Join one or more path components intelligently.
+
+>>>path = "/User"
+>>>print(os.path.join(path, "Downloads", "file.txt)
+>>>/home/User/Desktop/file.txt
+	
+*
+tarfile.open():
+The tarfile module makes it possible to read and write tar archives, including those using gzip, bz2 and lzma compression. Use the zipfile module to read or write .zip files, or the higher-level functions in shutil.
+
+*
+urllib.request.urlretrieve():
+The urllib.request module defines functions and classes which help in opening URLs (mostly HTTP) in a complex world — basic and digest authentication, redirections, cookies and more.
+
+*
